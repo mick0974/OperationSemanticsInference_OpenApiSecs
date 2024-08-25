@@ -38,7 +38,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PersonReq"
+                "$ref": "#/components/schemas/PersonReq_UPDATE"
               }
             }
           },
@@ -85,7 +85,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PersonReq"
+                "$ref": "#/components/schemas/PersonReq_CREATE"
               }
             }
           },
@@ -253,7 +253,7 @@
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/PersonReq"
+                  "$ref": "#/components/schemas/PersonReq_UPDATE"
                 }
               }
             }
@@ -304,7 +304,7 @@
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/PersonReq"
+                  "$ref": "#/components/schemas/PersonReq_CREATE"
                 }
               }
             }
@@ -596,7 +596,7 @@
           }
         }
       },
-      "PersonReq": {
+      "PersonReq_UPDATE": {
         "title": "PersonReq",
         "type": "object",
         "properties": {
@@ -621,13 +621,52 @@
             "type": "string"
           },
           "id": {
-            "$ref": "#/components/schemas/ObjectIdReq"
+            "type": "string",
+            "required": true
           },
           "insurance": {
             "type": "boolean"
           },
           "lastName": {
             "type": "string"
+          }
+        }
+      },
+      "PersonReq_CREATE": {
+        "title": "PersonReq",
+        "type": "object",
+        "properties": {
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32",
+            "required": true
+          },
+          "cars": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Car"
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "firstName": {
+            "type": "string",
+            "required": true
+          },
+          "id": {
+            "type": "string"
+          },
+          "insurance": {
+            "type": "boolean"
+          },
+          "lastName": {
+            "type": "string",
+            "required": true
           }
         }
       },
@@ -656,7 +695,7 @@
             "type": "string"
           },
           "id": {
-            "$ref": "#/components/schemas/ObjectIdRes"
+            "type": "string"
           },
           "insurance": {
             "type": "boolean"
