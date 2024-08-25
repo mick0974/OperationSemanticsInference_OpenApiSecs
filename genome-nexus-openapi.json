@@ -86,13 +86,15 @@
             "application/json": {
               "schema": {
                 "type": "array",
+                "required": true,
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "required": true,
+                  "example": ["X:g.66937331T>A","17:g.41242962_41242963insGA", "1:g.182712A>C", "2:g.265023C>T", "3:g.319781del", "19:g.110753dup", "1:g.1385015_1387562del"]
                 }
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -157,13 +159,15 @@
             "application/json": {
               "schema": {
                 "type": "array",
+                "required": true,
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "example": "rs116035550",
+                  "required": true
                 }
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -290,13 +294,14 @@
             "application/json": {
               "schema": {
                 "type": "array",
+                "required": true,
                 "items": {
-                  "$ref": "#/components/schemas/GenomicLocation"
+                  "$ref": "#/components/schemas/GenomicLocation",
+                  "required": true
                 }
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -453,13 +458,15 @@
             "application/json": {
               "schema": {
                 "type": "array",
+                "required": true,
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "required": true,
+                  "example": ["23140","26009","100131879"]
                 }
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -524,13 +531,15 @@
             "application/json": {
               "schema": {
                 "type": "array",
+                "required": true,
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "required": true,
+                  "example": ["TP53","PIK3CA","BRCA1"]
                 }
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -606,13 +615,15 @@
             "application/json": {
               "schema": {
                 "type": "array",
+                "required": true,
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "required": true,
+                  "example": ["TP53","PIK3CA","BRCA1"]
                 }
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -733,11 +744,11 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EnsemblFilter"
+                "$ref": "#/components/schemas/EnsemblFilter",
+                "required": true
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -837,13 +848,15 @@
             "application/json": {
               "schema": {
                 "type": "array",
+                "required": true,
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "example": ["1a37","1a4o"],
+                  "required": true
                 }
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -908,13 +921,15 @@
             "application/json": {
               "schema": {
                 "type": "array",
+                "required": true,
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "required": true,
+                  "example": ["PF02827","PF00093","PF15276"]
                 }
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -1010,11 +1025,11 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PtmFilter"
+                "$ref": "#/components/schemas/PtmFilter",
+                "required": true
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -1535,28 +1550,32 @@
             "type": "array",
             "description": "List of Ensembl gene IDs. For example [\"ENSG00000136999\", \"ENSG00000272398\", \"ENSG00000198695\"]",
             "items": {
-              "type": "string"
+              "type": "string",
+              "example": ["ENSG00000136999", "ENSG00000272398", "ENSG00000198695"]
             }
           },
           "hugoSymbols": {
             "type": "array",
             "description": "List of Hugo Symbols. For example [\"TP53\", \"PIK3CA\", \"BRCA1\"]",
             "items": {
-              "type": "string"
+              "type": "string",
+              "example": ["TP53", "PIK3CA", "BRCA1"]
             }
           },
           "proteinIds": {
             "type": "array",
             "description": "List of Ensembl protein IDs. For example [\"ENSP00000439985\", \"ENSP00000478460\", \"ENSP00000346196\"]",
             "items": {
-              "type": "string"
+              "type": "string",
+              "example": ["ENSP00000439985", "ENSP00000478460", "ENSP00000346196"]
             }
           },
           "transcriptIds": {
             "type": "array",
             "description": "List of Ensembl transcript IDs. For example [\"ENST00000361390\", \"ENST00000361453\", \"ENST00000361624\"]",
             "items": {
-              "type": "string"
+              "type": "string",
+              "example": ["ENST00000361390", "ENST00000361453", "ENST00000361624"]
             }
           }
         }
@@ -1795,25 +1814,30 @@
         "properties": {
           "chromosome": {
             "type": "string",
-            "description": "Chromosome"
+            "description": "Chromosome",
+            "example": "string"
           },
           "start": {
             "type": "integer",
             "description": "Start Position",
-            "format": "int32"
+            "format": "int32",
+            "example": 0
           },
           "end": {
             "type": "integer",
             "description": "End Position",
-            "format": "int32"
+            "format": "int32",
+            "example": 0
           },
           "referenceAllele": {
             "type": "string",
-            "description": "Reference Allele"
+            "description": "Reference Allele",
+            "example": "string"
           },
           "variantAllele": {
             "type": "string",
-            "description": "Variant Allele"
+            "description": "Variant Allele",
+            "example": "string"
           }
         }
       },
@@ -2800,7 +2824,8 @@
             "type": "array",
             "description": "List of Ensembl transcript IDs. For example [\"ENST00000361390\", \"ENST00000361453\", \"ENST00000361624\"]",
             "items": {
-              "type": "string"
+              "type": "string",
+              "example": ["ENST00000361390", "ENST00000361453", "ENST00000361624"]
             }
           }
         }
