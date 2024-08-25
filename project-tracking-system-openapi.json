@@ -16,7 +16,7 @@
     },
     "servers": [
       {
-        "url": "http://localhost:30118/"
+        "url": "http://localhost:50118/"
       }
     ],
     "tags": [
@@ -94,7 +94,32 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Assignment"
+                  "type": "object",
+                  "properties": {
+                    "commitDate": {
+                      "type": "string",
+                      "example": "10-11-202309:10:25",
+                      "required": true
+                    },
+                    "commitEmpDesc": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "commitMgrDesc": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "employeeId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "projectId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -142,7 +167,30 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Assignment"
+                  "type": "object",
+                  "properties": {
+                    "commitDate": {
+                      "type": "string",
+                      "format": "date-time",
+                      "required": true
+                    },
+                    "commitEmpDesc": {
+                      "type": "string"
+                    },
+                    "commitMgrDesc": {
+                      "type": "string"
+                    },
+                    "employeeId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "projectId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -194,7 +242,7 @@
               "description": "employeeId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             },
             {
@@ -203,7 +251,7 @@
               "description": "projectId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -257,7 +305,7 @@
               "description": "employeeId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             },
             {
@@ -266,7 +314,7 @@
               "description": "projectId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -311,7 +359,7 @@
               "description": "projectId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "id"
               }
             }
           ],
@@ -365,7 +413,7 @@
               "description": "employeeId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "id"
               }
             },
             {
@@ -374,7 +422,7 @@
               "description": "projectId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "id"
               }
             }
           ],
@@ -417,7 +465,30 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Assignment"
+                  "type": "object",
+                  "properties": {
+                    "commitDate": {
+                      "type": "string",
+                      "format": "date-time",
+                      "required": true
+                    },
+                    "commitEmpDesc": {
+                      "type": "string"
+                    },
+                    "commitMgrDesc": {
+                      "type": "string"
+                    },
+                    "employeeId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "projectId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -467,7 +538,32 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Assignment"
+                  "type": "object",
+                  "properties": {
+                    "commitDate": {
+                      "type": "string",
+                      "example": "10-11-202309:10:25",
+                      "required": true
+                    },
+                    "commitEmpDesc": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "commitMgrDesc": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "employeeId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "projectId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -519,7 +615,7 @@
               "description": "employeeId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             },
             {
@@ -528,7 +624,7 @@
               "description": "projectId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -582,7 +678,7 @@
               "description": "employeeId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             },
             {
@@ -591,7 +687,7 @@
               "description": "projectId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -643,7 +739,7 @@
               "description": "employeeId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             },
             {
@@ -652,7 +748,7 @@
               "description": "projectId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -683,6 +779,7 @@
           "deprecated": false
         }
       },
+
       "/app/api/credentials": {
         "get": {
           "tags": [
@@ -727,7 +824,30 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Credential"
+                  "type": "object",
+                  "properties": {
+                    "credentialId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "enabled": {
+                      "type": "boolean",
+                      "required": true
+                    },
+                    "password": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "role": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "username": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -775,7 +895,25 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Credential"
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "required": true
+                    },
+                    "password": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "role": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "username": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -824,7 +962,7 @@
               "in": "query",
               "description": "credentialId",
               "schema": {
-                "type": "string"
+                "type": "integer"
               }
             }
           ],
@@ -868,7 +1006,7 @@
               "in": "query",
               "description": "credentialId",
               "schema": {
-                "type": "string"
+                "type": "integer"
               }
             }
           ],
@@ -911,7 +1049,25 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Credential"
+                  "type": "object",
+                  "properties": {
+                    "enabled": {
+                      "type": "boolean",
+                      "required": true
+                    },
+                    "password": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "role": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "username": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -961,7 +1117,30 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Credential"
+                  "type": "object",
+                  "properties": {
+                    "credentialId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "enabled": {
+                      "type": "boolean",
+                      "required": true
+                    },
+                    "password": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "role": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "username": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -1101,7 +1280,7 @@
               "description": "id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -1132,6 +1311,7 @@
           "deprecated": false
         }
       },
+
       "/app/api/departments": {
         "get": {
           "tags": [
@@ -1176,7 +1356,28 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Department"
+                  "type": "object",
+                  "properties": {
+                    "departmentId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "departmentName": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "location": {
+                      "type": "object",
+                      "properties": {
+                        "locationId": {
+                          "type": "integer",
+                          "format": "int32",
+                          "required": true
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
@@ -1224,7 +1425,23 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Department"
+                  "type": "object",
+                  "properties": {
+                    "departmentName": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "location": {
+                      "type": "object",
+                      "properties": {
+                        "locationId": {
+                          "type": "integer",
+                          "format": "int32",
+                          "required": true
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
@@ -1272,8 +1489,9 @@
               "name": "departmentId",
               "in": "query",
               "description": "departmentId",
+              "required": true,
               "schema": {
-                "type": "string"
+                "type": "integer"
               }
             }
           ],
@@ -1316,8 +1534,9 @@
               "name": "departmentId",
               "in": "query",
               "description": "departmentId",
+              "required": true,
               "schema": {
-                "type": "string"
+                "type": "integer"
               }
             }
           ],
@@ -1360,7 +1579,25 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Department"
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "departmentName": {
+                        "type": "string",
+                        "required": true
+                      },
+                      "location": {
+                        "type": "object",
+                        "properties": {
+                          "locationId": {
+                            "type": "integer",
+                            "format": "int32",
+                            "required": true
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
@@ -1410,7 +1647,30 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Department"
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "departmentId": {
+                        "type": "integer",
+                        "format": "int32",
+                        "required": true
+                      },
+                      "departmentName": {
+                        "type": "string",
+                        "required": true
+                      },
+                      "location": {
+                        "type": "object",
+                        "properties": {
+                          "locationId": {
+                            "type": "integer",
+                            "format": "int32",
+                            "required": true
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
@@ -1462,7 +1722,7 @@
               "description": "id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -1493,6 +1753,7 @@
           "deprecated": false
         }
       },
+
       "/app/api/employees": {
         "get": {
           "tags": [
@@ -1537,7 +1798,41 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Employee"
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "string"
+                    },
+                    "employeeId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "hiredate": {
+                      "type": "string",
+                      "example": "10-10-2020"
+                    },
+                    "job": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "salary": {
+                      "type": "number",
+                      "format": "double",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -1585,7 +1880,56 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Employee"
+                  "type": "object",
+                  "properties": {
+                    "credential": {
+                      "type": "object",
+                      "properties": {
+                        "credentialId": {
+                          "type": "integer",
+                          "format": "int32",
+                          "required": true
+                        }
+                      }
+                    },
+                    "department": {
+                      "type": "object",
+                      "properties": {
+                        "departmentId": {
+                          "type": "integer",
+                          "format": "int32",
+                          "required": true
+                        }
+                      }
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "hiredate": {
+                      "type": "string",
+                      "example": "10-10-2020"
+                    },
+                    "job": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "salary": {
+                      "type": "number",
+                      "format": "double",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -1633,8 +1977,9 @@
               "name": "employeeId",
               "in": "query",
               "description": "employeeId",
+              "required": true,
               "schema": {
-                "type": "string"
+                "type": "integer"
               }
             }
           ],
@@ -1679,7 +2024,7 @@
               "description": "departmentId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -1724,7 +2069,7 @@
               "description": "employeeId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -1769,7 +2114,7 @@
               "description": "employeeId",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -1812,8 +2157,9 @@
               "name": "employeeId",
               "in": "query",
               "description": "employeeId",
+              "required": true,
               "schema": {
-                "type": "string"
+                "type": "integer"
               }
             }
           ],
@@ -1856,7 +2202,36 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Employee"
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "hiredate": {
+                      "type": "string",
+                      "example": "10-10-2020"
+                    },
+                    "job": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "salary": {
+                      "type": "number",
+                      "format": "double",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -1906,7 +2281,41 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Employee"
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "string"
+                    },
+                    "employeeId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "firstName": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "hiredate": {
+                      "type": "string",
+                      "example": "10-10-2020"
+                    },
+                    "job": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "lastName": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "salary": {
+                      "type": "number",
+                      "format": "double",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -2046,7 +2455,7 @@
               "description": "id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "integer"
               }
             }
           ],
@@ -2077,6 +2486,7 @@
           "deprecated": false
         }
       },
+
       "/app/api/locations": {
         "get": {
           "tags": [
@@ -2121,7 +2531,26 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Location"
+                  "type": "object",
+                  "properties": {
+                    "adr": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "city": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "postalCode": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "locationId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -2169,7 +2598,21 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Location"
+                  "type": "object",
+                  "properties": {
+                    "adr": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "city": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "postalCode": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -2217,8 +2660,9 @@
               "name": "locationId",
               "in": "query",
               "description": "locationId",
+              "required": true,
               "schema": {
-                "type": "string"
+                "type": "integer"
               }
             }
           ],
@@ -2255,8 +2699,9 @@
               "name": "locationId",
               "in": "query",
               "description": "locationId",
+              "required": true,
               "schema": {
-                "type": "string"
+                "type": "integer"
               }
             }
           ],
@@ -2293,7 +2738,21 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Location"
+                  "type": "object",
+                  "properties": {
+                    "adr": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "city": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "postalCode": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -2343,7 +2802,26 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Location"
+                  "type": "object",
+                  "properties": {
+                    "adr": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "city": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "locationId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "postalCode": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -2395,7 +2873,7 @@
               "description": "id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -2426,6 +2904,7 @@
           "deprecated": false
         }
       },
+
       "/app/api/projects": {
         "get": {
           "tags": [
@@ -2470,7 +2949,30 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "type": "object",
+                  "properties": {
+                    "endDate": {
+                      "type": "string",
+                      "example": "10-02-2020"
+                    },
+                    "projectId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "startDate": {
+                      "type": "string",
+                      "example": "10-10-2019"
+                    },
+                    "status": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -2518,7 +3020,25 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "type": "object",
+                  "properties": {
+                    "endDate": {
+                      "type": "string",
+                      "example": "10-02-2020"
+                    },
+                    "startDate": {
+                      "type": "string",
+                      "example": "10-10-2019"
+                    },
+                    "status": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -2566,8 +3086,9 @@
               "name": "projectId",
               "in": "query",
               "description": "projectId",
+              "required": true,
               "schema": {
-                "type": "string"
+                "type": "integer"
               }
             }
           ],
@@ -2604,8 +3125,9 @@
               "name": "projectId",
               "in": "query",
               "description": "projectId",
+              "required": true,
               "schema": {
-                "type": "string"
+                "type": "integer"
               }
             }
           ],
@@ -2642,7 +3164,29 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "type": "object",
+                  "properties": {
+                    "endDate": {
+                      "type": "string",
+                      "example": "10-02-2020"
+                    },
+                    "startDate": {
+                      "type": "string",
+                      "example": "10-10-2019"
+                    },
+                    "status": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "project_id": {
+                      "type": "integer",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -2692,7 +3236,30 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "type": "object",
+                  "properties": {
+                    "endDate": {
+                      "type": "string",
+                      "example": "10-02-2020"
+                    },
+                    "projectId": {
+                      "type": "integer",
+                      "format": "int32",
+                      "required": true
+                    },
+                    "startDate": {
+                      "type": "string",
+                      "example": "10-10-2019"
+                    },
+                    "status": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": true
+                    }
+                  }
                 }
               }
             },
@@ -2744,7 +3311,7 @@
               "description": "id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "int"
               }
             }
           ],
@@ -2776,6 +3343,7 @@
         }
       }
     },
+
     "components": {
       "schemas": {
         "Assignment": {
@@ -2863,7 +3431,8 @@
               "format": "int32"
             },
             "departmentName": {
-              "type": "string"
+              "type": "string",
+              "required": true
             },
             "location": {
               "$ref": "#/components/schemas/Location"
@@ -2996,24 +3565,28 @@
               "format": "int32"
             },
             "firstName": {
-              "type": "string"
+              "type": "string",
+              "required": true
             },
             "hiredate": {
               "type": "string",
               "example": "dd-MM-yyyy"
             },
             "job": {
-              "type": "string"
+              "type": "string",
+              "required": true
             },
             "lastName": {
-              "type": "string"
+              "type": "string",
+              "required": true
             },
             "phone": {
               "type": "string"
             },
             "salary": {
               "type": "number",
-              "format": "double"
+              "format": "double",
+              "required": true
             }
           }
         },
@@ -3044,17 +3617,21 @@
           "type": "object",
           "properties": {
             "adr": {
-              "type": "string"
+              "type": "string",
+              "required": true
             },
             "city": {
-              "type": "string"
+              "type": "string",
+              "required": true
             },
             "locationId": {
               "type": "integer",
-              "format": "int32"
+              "format": "int32",
+              "required": true
             },
             "postalCode": {
-              "type": "string"
+              "type": "string",
+              "required": true
             }
           }
         },
@@ -3097,10 +3674,12 @@
               "example": "dd-MM-yyyy"
             },
             "status": {
-              "type": "string"
+              "type": "string",
+              "required": true
             },
             "title": {
-              "type": "string"
+              "type": "string",
+              "required": true
             }
           }
         },
