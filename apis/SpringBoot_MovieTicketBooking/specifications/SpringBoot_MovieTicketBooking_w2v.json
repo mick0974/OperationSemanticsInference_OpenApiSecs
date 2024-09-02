@@ -1,0 +1,1361 @@
+{
+    "openapi": "3.0.0",
+    "servers": [
+        {
+            "url": "http://localhost:8080"
+        }
+    ],
+    "info": {
+        "title": "REST API",
+        "version": "",
+        "description": "REST API"
+    },
+    "paths": {
+        "/api/city": {
+            "get": {
+                "description": "",
+                "operationId": "em5",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "pincode": {
+                                                "type": "integer"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "state": {
+                                                "type": "string"
+                                            },
+                                            "cityId": {
+                                                "type": "integer"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "read",
+                "x-extendedOperationSemantics": "_"
+            },
+            "post": {
+                "description": "",
+                "operationId": "em1",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "com.praveen.springboottiketbookings.model.City",
+                                    "properties": {
+                                        "cityId": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "pincode": {
+                                            "type": "string"
+                                        },
+                                        "state": {
+                                            "type": "string"
+                                        },
+                                        "theTheater": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "cityId": {
+                                        "type": "integer"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "pincode": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "state": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "theTheater": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object"
+                                        }
+                                    }
+                                },
+                                "maxProperties": 5
+                            }
+                        }
+                    }
+                },
+                "x-crudOperationSemantics": "create",
+                "x-extendedOperationSemantics": "_"
+            }
+        },
+        "/api/city/{cityId}": {
+            "delete": {
+                "description": "",
+                "operationId": "em14",
+                "parameters": [
+                    {
+                        "name": "cityId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "NOT_FOUND"
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "delete",
+                "x-extendedOperationSemantics": "_"
+            },
+            "get": {
+                "description": "",
+                "operationId": "em8",
+                "parameters": [
+                    {
+                        "name": "cityId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "pincode": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "state": {
+                                            "type": "string"
+                                        },
+                                        "cityId": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "NOT_FOUND"
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "read",
+                "x-extendedOperationSemantics": "_"
+            },
+            "put": {
+                "description": "",
+                "operationId": "em11",
+                "parameters": [
+                    {
+                        "name": "cityId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "NOT_FOUND"
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "cityId": {
+                                        "type": "integer"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "pincode": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "state": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "theTheater": {
+                                        "type": "string"
+                                    }
+                                },
+                                "maxProperties": 5
+                            }
+                        }
+                    }
+                },
+                "x-crudOperationSemantics": "update",
+                "x-extendedOperationSemantics": "_"
+            }
+        },
+        "/api/movie": {
+            "get": {
+                "description": "",
+                "operationId": "em6",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "theShow": {
+                                                "type": "array",
+                                                "items": {
+                                                    "show_Id": {
+                                                        "type": "integer"
+                                                    },
+                                                    "show_time": {
+                                                        "type": "datetime"
+                                                    }
+                                                }
+                                            },
+                                            "movieName": {
+                                                "type": "string"
+                                            },
+                                            "director": {
+                                                "type": "string"
+                                            },
+                                            "description": {
+                                                "type": "string"
+                                            },
+                                            "movieId": {
+                                                "type": "integer"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "read",
+                "x-extendedOperationSemantics": "_"
+            },
+            "post": {
+                "description": "",
+                "operationId": "em2",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "com.praveen.springboottiketbookings.model.Movie",
+                                    "properties": {
+                                        "movieId": {
+                                            "type": "integer"
+                                        },
+                                        "movieName": {
+                                            "type": "string"
+                                        },
+                                        "director": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "theShow": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "director": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "movieId": {
+                                        "type": "integer"
+                                    },
+                                    "movieName": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "theShow": {
+                                        "type": "string"
+                                    }
+                                },
+                                "maxProperties": 5
+                            }
+                        }
+                    }
+                },
+                "x-crudOperationSemantics": "create",
+                "x-extendedOperationSemantics": "_"
+            }
+        },
+        "/api/movie/{movieId}": {
+            "delete": {
+                "description": "",
+                "operationId": "em15",
+                "parameters": [
+                    {
+                        "name": "movieId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "NOT_FOUND"
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "delete",
+                "x-extendedOperationSemantics": "_"
+            },
+            "get": {
+                "description": "",
+                "operationId": "em9",
+                "parameters": [
+                    {
+                        "name": "movieId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "movieName": {
+                                            "type": "string"
+                                        },
+                                        "director": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "movieId": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "NOT_FOUND"
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "read",
+                "x-extendedOperationSemantics": "_"
+            },
+            "put": {
+                "description": "",
+                "operationId": "em12",
+                "parameters": [
+                    {
+                        "name": "movieId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "NOT_FOUND"
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "director": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "movieId": {
+                                        "type": "integer"
+                                    },
+                                    "movieName": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "theShow": {
+                                        "type": "string"
+                                    }
+                                },
+                                "maxProperties": 5
+                            }
+                        }
+                    }
+                },
+                "x-crudOperationSemantics": "update",
+                "x-extendedOperationSemantics": "_"
+            }
+        },
+        "/api/theater": {
+            "get": {
+                "description": "",
+                "operationId": "em7",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "theaterName": {
+                                                "type": "string"
+                                            },
+                                            "theaterArea": {
+                                                "type": "string"
+                                            },
+                                            "theaterId": {
+                                                "type": "integer"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "read",
+                "x-extendedOperationSemantics": "_"
+            }
+        },
+        "/api/theater/{theaterId}": {
+            "delete": {
+                "description": "",
+                "operationId": "em16",
+                "parameters": [
+                    {
+                        "name": "theaterId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "NOT_FOUND"
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "delete",
+                "x-extendedOperationSemantics": "_"
+            },
+            "get": {
+                "description": "",
+                "operationId": "em10",
+                "parameters": [
+                    {
+                        "name": "theaterId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "theaterName": {
+                                            "type": "string"
+                                        },
+                                        "theaterArea": {
+                                            "type": "string"
+                                        },
+                                        "theaterId": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "NOT_FOUND"
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "read",
+                "x-extendedOperationSemantics": "_"
+            },
+            "put": {
+                "description": "",
+                "operationId": "em13",
+                "parameters": [
+                    {
+                        "name": "theaterId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "NOT_FOUND"
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "theaterArea": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "theaterId": {
+                                        "type": "integer"
+                                    },
+                                    "theaterName": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "city": {
+                                        "type": "string"
+                                    },
+                                    "theShow": {
+                                        "type": "string"
+                                    }
+                                },
+                                "maxProperties": 5
+                            }
+                        }
+                    }
+                },
+                "x-crudOperationSemantics": "update",
+                "x-extendedOperationSemantics": "_"
+            }
+        },
+        "/api/{theaterId}/{movieId}/show": {
+            "post": {
+                "description": "",
+                "operationId": "em4",
+                "parameters": [
+                    {
+                        "name": "theaterId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    },
+                    {
+                        "name": "movieId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "com.praveen.springboottiketbookings.model.Show",
+                                    "properties": {
+                                        "show_Id": {
+                                            "type": "integer"
+                                        },
+                                        "theTheater": {
+                                            "type": "object",
+                                            "title": "com.praveen.springboottiketbookings.model.Theater",
+                                            "properties": {
+                                                "T_id": {
+                                                    "type": "integer"
+                                                },
+                                                "T_name": {
+                                                    "type": "string"
+                                                },
+                                                "T_area": {
+                                                    "type": "string"
+                                                },
+                                                "city": {
+                                                    "type": "object",
+                                                    "title": "com.praveen.springboottiketbookings.model.City",
+                                                    "properties": {
+                                                        "C_id": {
+                                                            "type": "integer"
+                                                        },
+                                                        "C_name": {
+                                                            "type": "string"
+                                                        },
+                                                        "C_pincode": {
+                                                            "type": "string"
+                                                        },
+                                                        "C_state": {
+                                                            "type": "string"
+                                                        },
+                                                        "theTheater": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "theShow": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "theMovie": {
+                                            "type": "object",
+                                            "title": "com.praveen.springboottiketbookings.model.Movie",
+                                            "properties": {
+                                                "M_id": {
+                                                    "type": "integer"
+                                                },
+                                                "M_name": {
+                                                    "type": "string"
+                                                },
+                                                "M_director": {
+                                                    "type": "string"
+                                                },
+                                                "M_description": {
+                                                    "type": "string"
+                                                },
+                                                "theShow": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "show_time": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "show_time": {
+                                        "type": "string",
+                                        "required": true
+                                    }
+                                },
+                                "maxProperties": 5
+                            }
+                        }
+                    }
+                },
+                "x-crudOperationSemantics": "create",
+                "x-extendedOperationSemantics": "_"
+            }
+        },
+        "/api/{cityId}/theater": {
+            "post": {
+                "description": "",
+                "operationId": "em3",
+                "parameters": [
+                    {
+                        "name": "cityId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "com.praveen.springboottiketbookings.model.Theater",
+                                    "properties": {
+                                        "T_id": {
+                                            "type": "integer"
+                                        },
+                                        "T_name": {
+                                            "type": "string"
+                                        },
+                                        "T_area": {
+                                            "type": "string"
+                                        },
+                                        "city": {
+                                            "type": "object",
+                                            "title": "com.praveen.springboottiketbookings.model.City",
+                                            "properties": {
+                                                "C_id": {
+                                                    "type": "integer"
+                                                },
+                                                "C_name": {
+                                                    "type": "string"
+                                                },
+                                                "C_pincode": {
+                                                    "type": "string"
+                                                },
+                                                "C_state": {
+                                                    "type": "string"
+                                                },
+                                                "theTheater": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "theShow": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "theaterArea": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "theaterId": {
+                                        "type": "integer"
+                                    },
+                                    "theaterName": {
+                                        "type": "string",
+                                        "required": true
+                                    }
+                                },
+                                "maxProperties": 5
+                            }
+                        }
+                    }
+                },
+                "x-crudOperationSemantics": "create",
+                "x-extendedOperationSemantics": "_"
+            }
+        },
+        "/user/city": {
+            "get": {
+                "description": "",
+                "operationId": "em17",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "pincode": {
+                                                "type": "integer"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "state": {
+                                                "type": "string"
+                                            },
+                                            "cityId": {
+                                                "type": "integer"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "login",
+                "x-extendedOperationSemantics": "login"
+            }
+        },
+        "/user/movie/{movieId}/show": {
+            "get": {
+                "description": "",
+                "operationId": "em20",
+                "parameters": [
+                    {
+                        "name": "movieId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "show_Id": {
+                                                "type": "integer"
+                                            },
+                                            "show_time": {
+                                                "type": "datetime"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "login",
+                "x-extendedOperationSemantics": "login"
+            }
+        },
+        "/user/show/{showId}": {
+            "get": {
+                "description": "",
+                "operationId": "em21",
+                "parameters": [
+                    {
+                        "name": "showId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "com.praveen.springboottiketbookings.model.Bookings",
+                                    "properties": {
+                                        "show_id": {
+                                            "type": "integer"
+                                        },
+                                        "A1": {
+                                            "type": "integer"
+                                        },
+                                        "A2": {
+                                            "type": "integer"
+                                        },
+                                        "A3": {
+                                            "type": "integer"
+                                        },
+                                        "A4": {
+                                            "type": "integer"
+                                        },
+                                        "A5": {
+                                            "type": "integer"
+                                        },
+                                        "B1": {
+                                            "type": "integer"
+                                        },
+                                        "B2": {
+                                            "type": "integer"
+                                        },
+                                        "B3": {
+                                            "type": "integer"
+                                        },
+                                        "B4": {
+                                            "type": "integer"
+                                        },
+                                        "B5": {
+                                            "type": "integer"
+                                        },
+                                        "C1": {
+                                            "type": "integer"
+                                        },
+                                        "C2": {
+                                            "type": "integer"
+                                        },
+                                        "C3": {
+                                            "type": "integer"
+                                        },
+                                        "C4": {
+                                            "type": "integer"
+                                        },
+                                        "C5": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "login",
+                "x-extendedOperationSemantics": "login"
+            }
+        },
+        "/user/show/{showId}/bookings": {
+            "post": {
+                "description": "",
+                "operationId": "em22",
+                "parameters": [
+                    {
+                        "name": "showId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "com.praveen.springboottiketbookings.model.Bookings",
+                                    "properties": {
+                                        "show_id": {
+                                            "type": "integer"
+                                        },
+                                        "A1": {
+                                            "type": "integer"
+                                        },
+                                        "A2": {
+                                            "type": "integer"
+                                        },
+                                        "A3": {
+                                            "type": "integer"
+                                        },
+                                        "A4": {
+                                            "type": "integer"
+                                        },
+                                        "A5": {
+                                            "type": "integer"
+                                        },
+                                        "B1": {
+                                            "type": "integer"
+                                        },
+                                        "B2": {
+                                            "type": "integer"
+                                        },
+                                        "B3": {
+                                            "type": "integer"
+                                        },
+                                        "B4": {
+                                            "type": "integer"
+                                        },
+                                        "B5": {
+                                            "type": "integer"
+                                        },
+                                        "C1": {
+                                            "type": "integer"
+                                        },
+                                        "C2": {
+                                            "type": "integer"
+                                        },
+                                        "C3": {
+                                            "type": "integer"
+                                        },
+                                        "C4": {
+                                            "type": "integer"
+                                        },
+                                        "C5": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "A1": {
+                                        "type": "integer",
+                                        "required": true,
+                                        "enum": [0, 1]
+                                    },
+                                    "A2": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "A3": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "A4": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "A5": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "B1": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "B2": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "B3": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "B4": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "B5": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "C1": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "C2": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "C3": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "C4": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "C5": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    },
+                                    "show_id": {
+                                        "type": "integer",
+                                        "enum": [0, 1]
+                                    }
+                                },
+                                "maxProperties": 16
+                            }
+                        }
+                    }
+                },
+                "x-crudOperationSemantics": "create",
+                "x-extendedOperationSemantics": "_"
+            }
+        },
+        "/user/{cityId}/theater": {
+            "get": {
+                "description": "",
+                "operationId": "em18",
+                "parameters": [
+                    {
+                        "name": "cityId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "theater_id": {
+                                                "type": "integer"
+                                            },
+                                            "theater_name": {
+                                                "type": "string"
+                                            },
+                                            "theater_area": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "login",
+                "x-extendedOperationSemantics": "login"
+            }
+        },
+        "/user/theater/{theaterId}/movie": {
+            "get": {
+                "description": "",
+                "operationId": "em19",
+                "parameters": [
+                    {
+                        "name": "theaterId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "theaterName": {
+                                                "type": "string"
+                                            },
+                                            "theaterArea": {
+                                                "type": "string"
+                                            },
+                                            "theaterId": {
+                                                "type": "integer"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "others"
+                    }
+                },
+                "x-crudOperationSemantics": "login",
+                "x-extendedOperationSemantics": "login"
+            }
+        }
+    },
+    "components": {
+        "x-endpoint-interdependence": {},
+        "x-global-variables-info": {}
+    }
+}
